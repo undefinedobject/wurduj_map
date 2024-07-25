@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fb8c823dbf4c6e2a639af39156227058 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fb8c823dbf4c6e2a639af39156227058" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fb8c823dbf4c6e2a639af39156227058 = L.map(
+                "map_fb8c823dbf4c6e2a639af39156227058",
+                {
+                    center: [36.7754503, 71.2083508],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_27160735501e37da1e0f6b6fc97447af = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_27160735501e37da1e0f6b6fc97447af.addTo(map_fb8c823dbf4c6e2a639af39156227058);
+        
+    
+        function geo_json_02b644368302c06889a3371dd9101b10_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "yellow", "fillOpacity": 0.3, "weight": 2};
+            }
+        }
+
+        function geo_json_02b644368302c06889a3371dd9101b10_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_02b644368302c06889a3371dd9101b10 = L.geoJson(null, {
+                onEachFeature: geo_json_02b644368302c06889a3371dd9101b10_onEachFeature,
+            
+                style: geo_json_02b644368302c06889a3371dd9101b10_styler,
+        });
+
+        function geo_json_02b644368302c06889a3371dd9101b10_add (data) {
+            geo_json_02b644368302c06889a3371dd9101b10
+                .addData(data);
+        }
+            geo_json_02b644368302c06889a3371dd9101b10_add({"features": [{"geometry": {"coordinates": [[[[71.0052898, 36.9235411], [71.0069084, 36.9257438], [71.0078277, 36.9304288], [71.0067935, 36.9332764], [70.9997836, 36.9371343], [70.9990941, 36.9423697], [71.0017308, 36.9560342], [71.0028863, 36.9620222], [71.0095515, 36.9738664], [71.0132288, 36.9804762], [71.017136, 36.9848825], [71.014263, 36.9884624], [71.0169061, 36.9921339], [71.0283978, 36.9989258], [71.0329944, 36.9948875], [71.0436817, 36.9876363], [71.0516109, 36.9794664], [71.0587357, 36.9712957], [71.0691931, 36.9603694], [71.0810295, 36.9511864], [71.0904527, 36.9448495], [71.0981521, 36.942186], [71.1114824, 36.9345624], [71.1222846, 36.923539], [71.1243531, 36.9191292], [71.1300989, 36.9161891], [71.138143, 36.9138922], [71.1445784, 36.9073684], [71.1472214, 36.903509], [71.1540015, 36.8995575], [71.1631948, 36.8988223], [71.1736522, 36.8894481], [71.1868676, 36.8843929], [71.1941074, 36.8786939], [71.2035305, 36.8729945], [71.2074377, 36.8685818], [71.2159415, 36.8671108], [71.2215724, 36.8598475], [71.2282376, 36.8579166], [71.2336387, 36.8528593], [71.2452452, 36.8505604], [71.2515656, 36.8516639], [71.2554728, 36.8515719], [71.2582308, 36.8526754], [71.2602993, 36.8528593], [71.2630573, 36.8548823], [71.2658153, 36.8548823], [71.2679987, 36.8563535], [71.2708716, 36.8568132], [71.278571, 36.8604911], [71.2859257, 36.8603991], [71.3064957, 36.8612266], [71.3189067, 36.8626058], [71.3248824, 36.8659156], [71.3305133, 36.8675705], [71.334995, 36.870972], [71.3375713, 36.8711852], [71.3373401, 36.8691037], [71.3416616, 36.8649718], [71.3448237, 36.8618516], [71.3429265, 36.8601649], [71.3390265, 36.8548517], [71.3333348, 36.8529963], [71.3313321, 36.8424529], [71.3247971, 36.8318237], [71.3269052, 36.8255805], [71.3280646, 36.8189149], [71.3354428, 36.8163835], [71.3390265, 36.8136832], [71.3464048, 36.8067634], [71.3486182, 36.8017841], [71.3528344, 36.8000961], [71.3555748, 36.7969732], [71.3571559, 36.7919089], [71.3626368, 36.7886169], [71.3632693, 36.7832143], [71.3653773, 36.7816104], [71.3705421, 36.7747721], [71.3768663, 36.769453], [71.3806608, 36.7623602], [71.3850877, 36.7612625], [71.388039, 36.753409], [71.3891984, 36.7492708], [71.3928875, 36.7444567], [71.3995279, 36.7373616], [71.4044819, 36.7295901], [71.4029008, 36.7256196], [71.4077494, 36.7190298], [71.4068007, 36.7047499], [71.4099628, 36.6995104], [71.4099628, 36.6924112], [71.4135465, 36.6858185], [71.414706, 36.6788026], [71.4176074, 36.6715663], [71.4096312, 36.6706186], [71.4046092, 36.6717243], [71.3997841, 36.6780425], [71.3935804, 36.6812804], [71.38974, 36.689572], [71.385998, 36.6889403], [71.3816653, 36.6879137], [71.3769387, 36.6887034], [71.3743784, 36.6835706], [71.3673869, 36.682544], [71.3620694, 36.6834126], [71.3561611, 36.6827809], [71.3544871, 36.67978], [71.3459201, 36.6756733], [71.3422766, 36.67283], [71.3359745, 36.6699077], [71.3294752, 36.6673802], [71.3255364, 36.6680121], [71.3210068, 36.6712504], [71.3179541, 36.6707765], [71.3126367, 36.672751], [71.3047589, 36.6711714], [71.301214, 36.6711714], [71.2972751, 36.6650106], [71.2839814, 36.6664324], [71.2823073, 36.6673012], [71.2740357, 36.6669063], [71.2672412, 36.6668273], [71.2579849, 36.6710924], [71.2556216, 36.6713294], [71.2555231, 36.6690389], [71.2551292, 36.6612981], [71.2515843, 36.6567164], [71.2519781, 36.6522135], [71.2626131, 36.6443129], [71.2698015, 36.6398093], [71.2745282, 36.6330138], [71.2774823, 36.6296158], [71.2790578, 36.6262967], [71.2775808, 36.6201323], [71.2782701, 36.6158643], [71.2857539, 36.6112009], [71.2919576, 36.6044029], [71.2947148, 36.598632], [71.2948133, 36.5920701], [71.294321, 36.588354], [71.2852616, 36.5808423], [71.2814212, 36.5784701], [71.274922, 36.5711156], [71.26281, 36.5652631], [71.2531598, 36.5626531], [71.249024, 36.5643931], [71.2467592, 36.564314], [71.2410478, 36.5606757], [71.2332685, 36.5615458], [71.2248985, 36.5586983], [71.2183009, 36.5549807], [71.214362, 36.5538733], [71.2128849, 36.5519748], [71.2056965, 36.5561672], [71.1976218, 36.5573537], [71.1940768, 36.5554553], [71.188267, 36.5548225], [71.1861991, 36.5533196], [71.1820411, 36.554257], [71.1780191, 36.5604416], [71.1718136, 36.5650567], [71.1673318, 36.5718865], [71.1646888, 36.5732708], [71.1608965, 36.5734554], [71.1575639, 36.5785311], [71.1487154, 36.5841602], [71.1429695, 36.5850829], [71.1411309, 36.5871129], [71.1369939, 36.5872975], [71.1330867, 36.5898811], [71.1314779, 36.5932949], [71.1275707, 36.5956938], [71.1246978, 36.5964319], [71.1187221, 36.6011371], [71.1160791, 36.6044582], [71.1163089, 36.6094396], [71.1147001, 36.6143285], [71.10792, 36.6161733], [71.1012548, 36.6197705], [71.1025189, 36.6234597], [71.1028637, 36.6277943], [71.0957388, 36.6366473], [71.0929809, 36.6463291], [71.1034383, 36.6497405], [71.1019443, 36.659605], [71.0974626, 36.6651359], [71.0970029, 36.6691917], [71.091372, 36.6760123], [71.0891886, 36.6798831], [71.0853964, 36.6857812], [71.0864306, 36.6900202], [71.0882693, 36.691771], [71.0878096, 36.6945354], [71.0840174, 36.6972997], [71.0832129, 36.7000638], [71.0812594, 36.7033807], [71.0807997, 36.7112116], [71.0759732, 36.7146201], [71.0709169, 36.7171994], [71.068044, 36.7228183], [71.0632175, 36.7280684], [71.0602296, 36.7410539], [71.0516109, 36.7496176], [71.0462098, 36.7579963], [71.0362121, 36.7651772], [71.0347182, 36.7742905], [71.0374762, 36.7798132], [71.0365568, 36.7853355], [71.0331094, 36.7909494], [71.0247204, 36.7993235], [71.0240309, 36.8078807], [71.0200089, 36.8185529], [71.0193194, 36.8296835], [71.0159868, 36.8371336], [71.0146078, 36.8416401], [71.0174807, 36.847066], [71.0151824, 36.8508363], [71.014378, 36.8562615], [71.0100111, 36.8603072], [71.0067935, 36.8666511], [71.0173658, 36.8823707], [71.0180553, 36.8872422], [71.0100111, 36.8990061], [71.0003581, 36.9115032], [71.0015073, 36.9183942], [71.0052898, 36.9235411]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_02b644368302c06889a3371dd9101b10.addTo(map_fb8c823dbf4c6e2a639af39156227058);
+        
+    
+            var feature_group_b1a4a143a667983f6334fadfdf9dba0f = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_80a1482d565d7593f3aefa2595918e88 = L.marker(
+                [36.61922, 71.1856],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_af9916031cc14ed1a47fde01acad7650 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_80a1482d565d7593f3aefa2595918e88.setIcon(icon_af9916031cc14ed1a47fde01acad7650);
+        
+    
+            marker_80a1482d565d7593f3aefa2595918e88.bindTooltip(
+                `<div>
+                     Ab Do    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b66bd0a387e5730869cdfcfc9b98f59 = L.marker(
+                [36.68051, 71.12378],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_6b35b188d49f8b44f5bc4d1085034f6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4b66bd0a387e5730869cdfcfc9b98f59.setIcon(icon_6b35b188d49f8b44f5bc4d1085034f6a);
+        
+    
+            marker_4b66bd0a387e5730869cdfcfc9b98f59.bindTooltip(
+                `<div>
+                     Alosh Garayo    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e158a783653079fee763351c7d66da69 = L.marker(
+                [36.94734, 71.02245],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_a2e8b7d3e729d97c2fdc232f90395e72 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e158a783653079fee763351c7d66da69.setIcon(icon_a2e8b7d3e729d97c2fdc232f90395e72);
+        
+    
+            marker_e158a783653079fee763351c7d66da69.bindTooltip(
+                `<div>
+                     Chashm Wakhail    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ca20c293470bda01eccf1f4477db9301 = L.marker(
+                [36.61247, 71.17452],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_b8deca1400bb1e4dbf8437a3eb32fd56 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ca20c293470bda01eccf1f4477db9301.setIcon(icon_b8deca1400bb1e4dbf8437a3eb32fd56);
+        
+    
+            marker_ca20c293470bda01eccf1f4477db9301.bindTooltip(
+                `<div>
+                     Koyak    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2d5cfcad2480d129442b6cf2a1c096cd = L.marker(
+                [36.89325, 71.07524],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_64555674d4253dd460929c8c34686a44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2d5cfcad2480d129442b6cf2a1c096cd.setIcon(icon_64555674d4253dd460929c8c34686a44);
+        
+    
+            marker_2d5cfcad2480d129442b6cf2a1c096cd.bindTooltip(
+                `<div>
+                     Mali Hazara    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d5e89f5515272891b83cfb791b254711 = L.marker(
+                [36.79079, 71.0656],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_4801e72999e9d711dc0f1b416ff6f72e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d5e89f5515272891b83cfb791b254711.setIcon(icon_4801e72999e9d711dc0f1b416ff6f72e);
+        
+    
+            marker_d5e89f5515272891b83cfb791b254711.bindTooltip(
+                `<div>
+                     Peash    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dbe1508f91458cf799e0898329001a12 = L.marker(
+                [36.59864, 71.2401],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_ca861327f778e338eae3495222d1cd5c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dbe1508f91458cf799e0898329001a12.setIcon(icon_ca861327f778e338eae3495222d1cd5c);
+        
+    
+            marker_dbe1508f91458cf799e0898329001a12.bindTooltip(
+                `<div>
+                     Rabat Chehltan    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_99cc5f631ff4f043cb6b6baa1a8b2258 = L.marker(
+                [36.8601, 71.0483],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_9bdcbb769ab7b10fb798b977c786f15e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_99cc5f631ff4f043cb6b6baa1a8b2258.setIcon(icon_9bdcbb769ab7b10fb798b977c786f15e);
+        
+    
+            marker_99cc5f631ff4f043cb6b6baa1a8b2258.bindTooltip(
+                `<div>
+                     Rukhshan    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9e206cd5fc55ead8094e2b93bf7f3d70 = L.marker(
+                [36.64416, 71.13215],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_4189d1f2fe242ec020870da94601f2ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9e206cd5fc55ead8094e2b93bf7f3d70.setIcon(icon_4189d1f2fe242ec020870da94601f2ba);
+        
+    
+            marker_9e206cd5fc55ead8094e2b93bf7f3d70.bindTooltip(
+                `<div>
+                     Sara Sang Ya Say Sang    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d3f04eb6e91be09c629d9b5a33f0d6a9 = L.marker(
+                [36.69219, 71.14311],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_7bb40985687e8d6b51477f9524cb376f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d3f04eb6e91be09c629d9b5a33f0d6a9.setIcon(icon_7bb40985687e8d6b51477f9524cb376f);
+        
+    
+            marker_d3f04eb6e91be09c629d9b5a33f0d6a9.bindTooltip(
+                `<div>
+                     Sar Dahi    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e74dc2f550ca3d5599b33bc8f0141dbf = L.marker(
+                [36.92726, 71.04765],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_fb2b6f90c4c511eee2f011ac4b08299d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e74dc2f550ca3d5599b33bc8f0141dbf.setIcon(icon_fb2b6f90c4c511eee2f011ac4b08299d);
+        
+    
+            marker_e74dc2f550ca3d5599b33bc8f0141dbf.bindTooltip(
+                `<div>
+                     Shah Gan    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_125bca09bb1aead64e899015463a686b = L.marker(
+                [36.88453, 71.04155],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_941d9e5654fafd6424aa8dee8016ad4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_125bca09bb1aead64e899015463a686b.setIcon(icon_941d9e5654fafd6424aa8dee8016ad4e);
+        
+    
+            marker_125bca09bb1aead64e899015463a686b.bindTooltip(
+                `<div>
+                     Shahid Abad    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35b3849fdf4d8a5df7788f7bccad7b35 = L.marker(
+                [36.68573, 71.14186],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_8572b429db56f90dc319ae2e7ab97877 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_35b3849fdf4d8a5df7788f7bccad7b35.setIcon(icon_8572b429db56f90dc319ae2e7ab97877);
+        
+    
+            marker_35b3849fdf4d8a5df7788f7bccad7b35.bindTooltip(
+                `<div>
+                     Warche    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8262a020676645786d752acee9e78b74 = L.marker(
+                [36.95965, 71.01343],
+                {}
+            ).addTo(feature_group_b1a4a143a667983f6334fadfdf9dba0f);
+        
+    
+            var icon_c46421594bde3ddfcf61092f821702f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8262a020676645786d752acee9e78b74.setIcon(icon_c46421594bde3ddfcf61092f821702f3);
+        
+    
+            marker_8262a020676645786d752acee9e78b74.bindTooltip(
+                `<div>
+                     Yazaghcha    
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_b1a4a143a667983f6334fadfdf9dba0f.addTo(map_fb8c823dbf4c6e2a639af39156227058);
+        
+    
+            var feature_group_12362e59abdf0b2f109000028449ff78 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_84e7c3412ab3ebe0f7a598317f815984 = L.marker(
+                [36.88763, 71.07416],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_a157fb612bd3de9f97c7cd934a44d9c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_84e7c3412ab3ebe0f7a598317f815984.setIcon(icon_a157fb612bd3de9f97c7cd934a44d9c5);
+        
+    
+            marker_84e7c3412ab3ebe0f7a598317f815984.bindTooltip(
+                `<div>
+                     Abjan     | Beneficiaries: 149
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c125e9952fa64ea04b0bd9d961ef882 = L.marker(
+                [36.88688, 71.08652],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_8d6035bc929d8e9da470f2e22afd0385 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2c125e9952fa64ea04b0bd9d961ef882.setIcon(icon_8d6035bc929d8e9da470f2e22afd0385);
+        
+    
+            marker_2c125e9952fa64ea04b0bd9d961ef882.bindTooltip(
+                `<div>
+                     Ahwar     | Beneficiaries: 40
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7fcadcea80fb872f5a30a4ac1844610a = L.marker(
+                [36.93894, 71.04427],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_cd66a1144f68053af2801df2e79dd2dc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7fcadcea80fb872f5a30a4ac1844610a.setIcon(icon_cd66a1144f68053af2801df2e79dd2dc);
+        
+    
+            marker_7fcadcea80fb872f5a30a4ac1844610a.bindTooltip(
+                `<div>
+                     Ashtakan     | Beneficiaries: 66
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_629ac9c44470234197cd7738aeed1c62 = L.marker(
+                [36.8196, 71.05059],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_da54bdca904fd4028d5129e84c4068a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_629ac9c44470234197cd7738aeed1c62.setIcon(icon_da54bdca904fd4028d5129e84c4068a5);
+        
+    
+            marker_629ac9c44470234197cd7738aeed1c62.bindTooltip(
+                `<div>
+                     Ashterab     | Beneficiaries: 100
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ebef9ac4f5a7ba70a7b9db7064f6c65d = L.marker(
+                [36.92228, 71.0628],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_01cc8df343ad6edd73279481a61770fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ebef9ac4f5a7ba70a7b9db7064f6c65d.setIcon(icon_01cc8df343ad6edd73279481a61770fd);
+        
+    
+            marker_ebef9ac4f5a7ba70a7b9db7064f6c65d.bindTooltip(
+                `<div>
+                     Asten     | Beneficiaries: 61
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ccf57a4a56a3351f78ccee73be63a0ae = L.marker(
+                [36.87732, 71.05336],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_c37b9370a3bf9c4da4c2ebe8876acd08 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ccf57a4a56a3351f78ccee73be63a0ae.setIcon(icon_c37b9370a3bf9c4da4c2ebe8876acd08);
+        
+    
+            marker_ccf57a4a56a3351f78ccee73be63a0ae.bindTooltip(
+                `<div>
+                     Bara Bara     | Beneficiaries: 150
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f221020bb5e7c11a81bcf025714ff7cd = L.marker(
+                [36.78487, 71.09159],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_710dc85b93733a505b654602333d77b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f221020bb5e7c11a81bcf025714ff7cd.setIcon(icon_710dc85b93733a505b654602333d77b3);
+        
+    
+            marker_f221020bb5e7c11a81bcf025714ff7cd.bindTooltip(
+                `<div>
+                     Bashand     | Beneficiaries: 269
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a13d8cb3c03b118c0711f9bb955b851 = L.marker(
+                [36.91935, 71.04891],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_19da85a3c663c5fdd1ff8584cf45a974 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5a13d8cb3c03b118c0711f9bb955b851.setIcon(icon_19da85a3c663c5fdd1ff8584cf45a974);
+        
+    
+            marker_5a13d8cb3c03b118c0711f9bb955b851.bindTooltip(
+                `<div>
+                     Char Dara     | Beneficiaries: 23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0440717ad2bf381653206870ea997859 = L.marker(
+                [36.91258, 71.06384],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_5400557e304c2876bc1184d7937ad410 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0440717ad2bf381653206870ea997859.setIcon(icon_5400557e304c2876bc1184d7937ad410);
+        
+    
+            marker_0440717ad2bf381653206870ea997859.bindTooltip(
+                `<div>
+                     Dahi Do Rowza     | Beneficiaries: 102
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9b7a2b359bf5ff5c45a7b94ab9c11fa0 = L.marker(
+                [36.63314, 71.13216],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_184695d497602181b08fa7a503ac48d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9b7a2b359bf5ff5c45a7b94ab9c11fa0.setIcon(icon_184695d497602181b08fa7a503ac48d1);
+        
+    
+            marker_9b7a2b359bf5ff5c45a7b94ab9c11fa0.bindTooltip(
+                `<div>
+                     Dahi Qala     | Beneficiaries: 304
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_03f7feadfe43c72f629af741e3b656e0 = L.marker(
+                [36.83872, 71.08407],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_dacb5b760375ffd00b9197e44f31af19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_03f7feadfe43c72f629af741e3b656e0.setIcon(icon_dacb5b760375ffd00b9197e44f31af19);
+        
+    
+            marker_03f7feadfe43c72f629af741e3b656e0.bindTooltip(
+                `<div>
+                     Ghachan     | Beneficiaries: 136
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6c00a1118588a564b445a309506e4a0d = L.marker(
+                [36.87247, 71.08143],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_20872859bf70d7b584a033670d5e7750 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6c00a1118588a564b445a309506e4a0d.setIcon(icon_20872859bf70d7b584a033670d5e7750);
+        
+    
+            marker_6c00a1118588a564b445a309506e4a0d.bindTooltip(
+                `<div>
+                     Ghanyo     | Beneficiaries: 300
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_29dfe0baf954de32247a8da10e2d841a = L.marker(
+                [36.62819, 71.1492],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_16bf95c94fb19cfec1a3709a0830085e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_29dfe0baf954de32247a8da10e2d841a.setIcon(icon_16bf95c94fb19cfec1a3709a0830085e);
+        
+    
+            marker_29dfe0baf954de32247a8da10e2d841a.bindTooltip(
+                `<div>
+                     Kaz Dahi     | Beneficiaries: 16
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c1a5fbf0f8499df945a3349bc01d15ea = L.marker(
+                [36.94901, 71.03565],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_87cbd2a0766f218aceea0b5ffe9202b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c1a5fbf0f8499df945a3349bc01d15ea.setIcon(icon_87cbd2a0766f218aceea0b5ffe9202b6);
+        
+    
+            marker_c1a5fbf0f8499df945a3349bc01d15ea.bindTooltip(
+                `<div>
+                     Khaisrow     | Beneficiaries: 64
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7cd5c7ee473622f2857caea6fb6ef909 = L.marker(
+                [36.83067, 71.05371],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_d883391a7103a645b60fbdc3a719aa1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7cd5c7ee473622f2857caea6fb6ef909.setIcon(icon_d883391a7103a645b60fbdc3a719aa1b);
+        
+    
+            marker_7cd5c7ee473622f2857caea6fb6ef909.bindTooltip(
+                `<div>
+                     Khashben     | Beneficiaries: 105
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6c6ab3194bcc1e2f0662578b377ce5cb = L.marker(
+                [36.87046, 71.0507],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_406c0923ea3a7c47ea8e298a4e3d9957 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6c6ab3194bcc1e2f0662578b377ce5cb.setIcon(icon_406c0923ea3a7c47ea8e298a4e3d9957);
+        
+    
+            marker_6c6ab3194bcc1e2f0662578b377ce5cb.bindTooltip(
+                `<div>
+                     Khoch     | Beneficiaries: 87
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_64f7be6d954b2f4a21803868bff28538 = L.marker(
+                [36.90573, 71.06848],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_407afdb1ee3e4e9528416fb9bb224fdf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_64f7be6d954b2f4a21803868bff28538.setIcon(icon_407afdb1ee3e4e9528416fb9bb224fdf);
+        
+    
+            marker_64f7be6d954b2f4a21803868bff28538.bindTooltip(
+                `<div>
+                     Markaz Wolluswaly Shakaran     | Beneficiaries: 328
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e13dd533790425a3ae44957b42f3eebd = L.marker(
+                [36.89897, 71.06928],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_61b1f9bffb727cc1d43cbdf5e70b500a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e13dd533790425a3ae44957b42f3eebd.setIcon(icon_61b1f9bffb727cc1d43cbdf5e70b500a);
+        
+    
+            marker_e13dd533790425a3ae44957b42f3eebd.bindTooltip(
+                `<div>
+                     Morkan     | Beneficiaries: 310
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b3263ef4b338dc0c5fdcfa794420e64 = L.marker(
+                [36.95563, 71.00243],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_734df5c575d32650f6eedc698c2db5d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5b3263ef4b338dc0c5fdcfa794420e64.setIcon(icon_734df5c575d32650f6eedc698c2db5d3);
+        
+    
+            marker_5b3263ef4b338dc0c5fdcfa794420e64.bindTooltip(
+                `<div>
+                     Pass Bagh     | Beneficiaries: 100
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b9ca83eaaf1981b21d29bd1ec908834b = L.marker(
+                [36.64164, 71.15244],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_9b5a640c6c5c2ac6c01258e9b49158d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b9ca83eaaf1981b21d29bd1ec908834b.setIcon(icon_9b5a640c6c5c2ac6c01258e9b49158d7);
+        
+    
+            marker_b9ca83eaaf1981b21d29bd1ec908834b.bindTooltip(
+                `<div>
+                     Safid Dara     | Beneficiaries: 94
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1ef322926af026bbb5e8cef03e81ac7f = L.marker(
+                [36.92499, 71.05954],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_450e7150a8bac407747a4ef50bfdea1d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1ef322926af026bbb5e8cef03e81ac7f.setIcon(icon_450e7150a8bac407747a4ef50bfdea1d);
+        
+    
+            marker_1ef322926af026bbb5e8cef03e81ac7f.bindTooltip(
+                `<div>
+                     Sang Kabod     | Beneficiaries: 164
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d17eb7eb4a2a64a52c25ee72260e4e30 = L.marker(
+                [36.94607, 71.03373],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_ca64f70086028bb6c389eead377a432e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d17eb7eb4a2a64a52c25ee72260e4e30.setIcon(icon_ca64f70086028bb6c389eead377a432e);
+        
+    
+            marker_d17eb7eb4a2a64a52c25ee72260e4e30.bindTooltip(
+                `<div>
+                     Shafchan     | Beneficiaries: 33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_59a2e81e5ee8732245b80aed3e5ad669 = L.marker(
+                [36.76089, 71.07428],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_3c3dd77b2ecdd7f82da846926ed312db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_59a2e81e5ee8732245b80aed3e5ad669.setIcon(icon_3c3dd77b2ecdd7f82da846926ed312db);
+        
+    
+            marker_59a2e81e5ee8732245b80aed3e5ad669.bindTooltip(
+                `<div>
+                     Sufeyan     | Beneficiaries: 92
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b73a894854add3f3bf726f745cf7bf34 = L.marker(
+                [36.91598, 71.05054],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_d6dc5d6d6e52c112d6b24b25b412333b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b73a894854add3f3bf726f745cf7bf34.setIcon(icon_d6dc5d6d6e52c112d6b24b25b412333b);
+        
+    
+            marker_b73a894854add3f3bf726f745cf7bf34.bindTooltip(
+                `<div>
+                     Tarang     | Beneficiaries: 207
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_699f654b3a1463df7e8a54bf8938c820 = L.marker(
+                [36.69325, 71.15378],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_002a5120ad0c99bebd98b7cda4283992 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_699f654b3a1463df7e8a54bf8938c820.setIcon(icon_002a5120ad0c99bebd98b7cda4283992);
+        
+    
+            marker_699f654b3a1463df7e8a54bf8938c820.bindTooltip(
+                `<div>
+                     Teer Garan     | Beneficiaries: 422
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_06f6f76493bd1100465169db8e883a76 = L.marker(
+                [36.94298, 71.02406],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_2d6e02a7a52712f7b50affc3b303c034 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_06f6f76493bd1100465169db8e883a76.setIcon(icon_2d6e02a7a52712f7b50affc3b303c034);
+        
+    
+            marker_06f6f76493bd1100465169db8e883a76.bindTooltip(
+                `<div>
+                     Wakhial Bala     | Beneficiaries: 72
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e1194caaab179dcab74746baa0cf7e83 = L.marker(
+                [36.88371, 71.10187],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_6358ffd2447d3fb64734602a539b5dd5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e1194caaab179dcab74746baa0cf7e83.setIcon(icon_6358ffd2447d3fb64734602a539b5dd5);
+        
+    
+            marker_e1194caaab179dcab74746baa0cf7e83.bindTooltip(
+                `<div>
+                     Yakhshaira     | Beneficiaries: 131
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f40bbaf1477f25034184d07bfc5a56f1 = L.marker(
+                [36.80871, 71.06944],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_f2b1a7d2af7bbf4e45c272ff2ce11b1d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f40bbaf1477f25034184d07bfc5a56f1.setIcon(icon_f2b1a7d2af7bbf4e45c272ff2ce11b1d);
+        
+    
+            marker_f40bbaf1477f25034184d07bfc5a56f1.bindTooltip(
+                `<div>
+                     Yomal     | Beneficiaries: 163
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ad9bb345c17e9699aaf133394e5589c8 = L.marker(
+                [36.83645, 71.06892],
+                {}
+            ).addTo(feature_group_12362e59abdf0b2f109000028449ff78);
+        
+    
+            var icon_835aa1bc3bcae1c8d9a08d29bb056748 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ad9bb345c17e9699aaf133394e5589c8.setIcon(icon_835aa1bc3bcae1c8d9a08d29bb056748);
+        
+    
+            marker_ad9bb345c17e9699aaf133394e5589c8.bindTooltip(
+                `<div>
+                     Zo     | Beneficiaries: 71
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_12362e59abdf0b2f109000028449ff78.addTo(map_fb8c823dbf4c6e2a639af39156227058);
+        
+    
+            var layer_control_54f6a13d84c4c30742cdc4baad1c0578_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_27160735501e37da1e0f6b6fc97447af,
+                },
+                overlays :  {
+                    "Warduj District Border" : geo_json_02b644368302c06889a3371dd9101b10,
+                    "Not In Sample" : feature_group_b1a4a143a667983f6334fadfdf9dba0f,
+                    "In Sample" : feature_group_12362e59abdf0b2f109000028449ff78,
+                },
+            };
+            let layer_control_54f6a13d84c4c30742cdc4baad1c0578 = L.control.layers(
+                layer_control_54f6a13d84c4c30742cdc4baad1c0578_layers.base_layers,
+                layer_control_54f6a13d84c4c30742cdc4baad1c0578_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_fb8c823dbf4c6e2a639af39156227058);
+
+        
+    
+            tile_layer_27160735501e37da1e0f6b6fc97447af.addTo(map_fb8c823dbf4c6e2a639af39156227058);
+        
+    
+            geo_json_02b644368302c06889a3371dd9101b10.addTo(map_fb8c823dbf4c6e2a639af39156227058);
+        
+    
+            feature_group_b1a4a143a667983f6334fadfdf9dba0f.addTo(map_fb8c823dbf4c6e2a639af39156227058);
+        
+    
+            feature_group_12362e59abdf0b2f109000028449ff78.addTo(map_fb8c823dbf4c6e2a639af39156227058);
+        
+</script>
+</html>
